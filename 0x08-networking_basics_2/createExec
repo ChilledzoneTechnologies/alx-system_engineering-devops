@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]
+then
+	file=$1
+	echo "#!/usr/bin/env bash" > $file
+	chmod +x $file
+	ls -l $file
+	vim $file
+else
+	echo "Usage: ./createExec {nameOfFile}"
+fi 
