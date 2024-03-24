@@ -1,17 +1,16 @@
-# Setting up my client config file to authenticates only through SSH keys
-
+# Configure the SSH server to authenticates only through SSH keys
 include stdlib
 
 file_line { 'Turn off passwd auth':
-  ensure => present,
+  ensure => 'present',
   path   => '/etc/ssh/ssh_config',
-  line   => '    PasswordAuthentication no',
-  replace => true,
+  line   => 'PasswordAuthentication no',
+  match  => '^PasswordAuthentication'
 }
 
-file_line { 'Delare identity file':
-  ensure => present,
+file_line { 'Declare identity file':
+  ensure => 'present',
   path   => '/etc/ssh/ssh_config',
-  line   => '     IdentityFile ~/.ssh/school',
-  replace => true,
+  line   => 'IdentityFile ~/.ssh/school',
+  match  => '^IdentityFile'
 }
