@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
-# 4 bad luck, 8 is your chance
+# Loops from 1 to 10 and displays:
+#   "bad luck" for the 4th iteration
+#   "good luck" for the 8th iteration
+#   "Best School" for all other iterations
 
-i=1
+count=0
 
-while [ "$i" -lt 11 ]; do
-
-  # if 4 bad luck elif 8 good luck
-  if [ "$i" -eq 4 ]; then
+while [ $count -lt 10 ]
+do
+  if [ $count -eq 3 ]
+  then
     echo "bad luck"
-  elif [ "$i" -eq 8 ]; then
+  elif [ $count -eq 7 ]
+  then
     echo "good luck"
   else
     echo "Best School"
   fi
-
-  ((i++))
+  (( count++ ))
 done

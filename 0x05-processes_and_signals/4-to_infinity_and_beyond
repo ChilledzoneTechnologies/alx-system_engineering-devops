@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# A script that displays To infinity and beyond indefinitely and handles SIGINT
+# Displays "To infinity and beyond" indefinitely with
+#+ a sleep 2 in between each iteration.
 
-trap "exit" SIGINT
-# trap "echo "Terminated" ; exit" SIGTERM
-while $1
+while true
 do
-	echo "To infinity and beyond"
-	sleep 2
+  echo "To infinity and beyond"
+  sleep 2
 done

@@ -1,8 +1,0 @@
-#!/bin/bash
-# Create File and make them executable.
-
-echo -n "Enter the name of file: "
-read -r name
-echo "#!/usr/bin/env bash" > "$name"
-chmod +x "$name"
-ls -l "$name"

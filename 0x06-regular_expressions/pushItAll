@@ -1,6 +1,0 @@
-#!/bin/bash
-# A Script that adds, commits and push all the modified files in the directory
-
-git add .
-git commit -m 'Regular expression'
-git push
